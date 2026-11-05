@@ -3,11 +3,123 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Page Title</title>
+  <title>Diller Scofidio + Renfro</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Josefin+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
-  <script src="js/script.js" language="javascript"></script>
+  <script src="js/script.js" defer></script>
 </head>
 <body>
+  <header class="site-header">
+    <a class="site-logo" href="#home" aria-label="Diller Scofidio + Renfro home">
+      <img src="images/CustomDSRLogo.png" alt="Diller Scofidio + Renfro">
+    </a>
+    <button class="menu-toggle" type="button" aria-controls="primary-navigation" aria-expanded="false">
+      <span class="visually-hidden">Toggle navigation</span>
+      <span class="menu-toggle__icon" aria-hidden="true"></span>
+    </button>
+    <nav class="primary-navigation" id="primary-navigation" aria-label="Primary navigation">
+      <a href="projects.html">Projects</a>
+      <a href="#studio">Studio</a>
+      <a href="#contact">Contact</a>
+      <a href="#news">News</a>
+    </nav>
+  </header>
+  <section class="project-carousel" aria-label="Featured projects">
+    <img
+      class="project-carousel__image"
+      src="images/theShedcarousel1.jpg"
+      alt="The Shed"
+      fetchpriority="high">
+    <span class="project-carousel__side-panel project-carousel__side-panel--left" aria-hidden="true"></span>
+    <span class="project-carousel__side-panel project-carousel__side-panel--right" aria-hidden="true"></span>
+    <h1 class="project-carousel__title">THE SHED</h1>
+    <button class="project-carousel__control project-carousel__control--previous" type="button" aria-label="Previous project">
+      <span aria-hidden="true">&lsaquo;</span>
+    </button>
+    <button class="project-carousel__control project-carousel__control--next" type="button" aria-label="Next project">
+      <span aria-hidden="true">&rsaquo;</span>
+    </button>
+    <span class="project-carousel__count" aria-live="polite">01 / 20</span>
+  </section>
+  <main class="home-content" id="home">
+    <section class="studio-section" id="studio">
+      <h1>Studio</h1>
+      <p>Diller Scofidio + Renfro is a New York-based design studio working across architecture, visual art, and performance. Since its founding in 1981, the practice has moved from experimental installations to cultural and civic projects around the world, including the Institute of Contemporary Art in Boston, the High Line, and the transformation of Lincoln Center.</p>
+    </section>
 
+    <section class="team-section" id="meet-us">
+      <h2>Meet Us</h2>
+      <div class="team-list">
+        <article class="team-member">
+          <h3>Ricardo Scofidio</h3>
+          <p>Founding partner Ricardo Scofidio helped establish the studio’s interdisciplinary approach, bringing architecture into conversation with performance, media, and the visual arts.</p>
+        </article>
+        <article class="team-member">
+          <h3>Charles Renfro</h3>
+          <p>Charles Renfro joined the studio in 1997 and became a partner in 2004. His work spans cultural, public, and educational projects, with a focus on how design shapes shared experiences.</p>
+        </article>
+        <article class="team-member">
+          <h3>Benjamin Gilmartin</h3>
+          <p>Benjamin Gilmartin joined DS+R in 2004 and became a partner in 2015. He leads projects across architecture, urban design, and the public realm.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="contact-section" id="contact" aria-labelledby="contact-title">
+      <h2 id="contact-title">Contact</h2>
+      <div class="contact-offices">
+        <section class="contact-entry" aria-labelledby="contact-office">
+          <h3 id="contact-office">Diller Scofidio + Renfro</h3>
+          <address>
+            601 W. 26th Street, Suite 1815<br>
+            New York, NY 10001<br>
+            <a href="tel:+12122607971">212.260.7971</a> /
+            <a href="mailto:disco@dsrny.com">disco@dsrny.com</a>
+          </address>
+        </section>
+        <section class="contact-entry" aria-labelledby="contact-business-development">
+          <h3 id="contact-business-development">Business Development</h3>
+          <p><a href="tel:+12122607971">212.260.7971</a> / <a href="mailto:bd@dsrny.com">bd@dsrny.com</a></p>
+        </section>
+        <section class="contact-entry" aria-labelledby="contact-press">
+          <h3 id="contact-press">Press</h3>
+          <p><a href="tel:+12122607971">212.260.7971</a> / <a href="mailto:press@dsrny.com">press@dsrny.com</a></p>
+        </section>
+        <section class="contact-entry" aria-labelledby="contact-resource-librarian">
+          <h3 id="contact-resource-librarian">Resource Librarian</h3>
+          <p><a href="tel:+12122607971">212.260.7971</a> / <a href="mailto:mbroaddus@dsrny.com">mbroaddus@dsrny.com</a> / Mary Broaddus</p>
+        </section>
+        <section class="contact-entry" aria-labelledby="contact-applications">
+          <h3 id="contact-applications">Applications</h3>
+          <p>No phone calls please / <a href="mailto:jobs@dsrny.com">jobs@dsrny.com</a></p>
+        </section>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <a class="site-footer__logo" href="#home" aria-label="Diller Scofidio + Renfro home">
+      <img src="images/CustomDSRLogo.png" alt="">
+    </a>
+    <div class="site-footer__offices">
+      <address>
+        <span>Diller Scofidio + Renfro</span>
+        601 W. 26th Street, Suite 1815,<br>
+        New York, NY 10001
+      </address>
+      <address>
+        <span>United Kingdom:</span>
+        75 Cowcross St,<br>
+        London EC1M 6EL, UK
+      </address>
+    </div>
+    <nav class="site-footer__navigation" aria-label="Footer navigation">
+      <a href="projects.html">Projects</a>
+      <a href="#studio">Studio</a>
+      <a href="#contact">Contact</a>
+      <a href="#news">News</a>
+    </nav>
+  </footer>
 </body>
 </html>
