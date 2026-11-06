@@ -12,6 +12,33 @@ const viewButtons = [...document.querySelectorAll(".project-view-toggle button")
 let activeCriterion = "";
 let activeCategory = "";
 
+function updateCriterionCounts() {
+  categoryDetails.forEach((category) => {
+    const categoryName = category.dataset.category;
+    const categoryProjects = projectCards.filter((card) =>
+      (card.dataset.categories || "").split(" ").includes(categoryName)
+    );
+
+    category.querySelectorAll(".project-criterion").forEach((button) => {
+      const criterion = button.dataset.criterion;
+      const matchingProjects = new Set(
+        categoryProjects
+          .filter((card) => (card.dataset.criteria || "").split(" ").includes(criterion))
+          .map((card) => card.dataset.name)
+      );
+      let count = button.querySelector(".project-criterion__count");
+
+      if (!count) {
+        count = document.createElement("span");
+        count.className = "project-criterion__count";
+        button.append(count);
+      }
+
+      count.textContent = `(${matchingProjects.size})`;
+    });
+  });
+}
+
 function updateProjects() {
   const query = projectSearch.value.trim().toLowerCase();
   const visibleCards = [];
@@ -45,6 +72,7 @@ function updateProjects() {
   emptyState.hidden = visibleCards.length > 0;
 }
 
+updateCriterionCounts();
 projectSearch.addEventListener("input", updateProjects);
 projectSort.addEventListener("change", updateProjects);
 projectOrder.addEventListener("change", updateProjects);

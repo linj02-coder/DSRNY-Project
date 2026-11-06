@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>News | Diller Scofidio + Renfro</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Josefin+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+  <script src="js/news.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="site-logo" href="index.html#home" aria-label="Diller Scofidio + Renfro home">
+      <img src="images/CustomDSRLogo.png" alt="Diller Scofidio + Renfro">
+    </a>
+    <button class="menu-toggle" type="button" aria-controls="primary-navigation" aria-expanded="false">
+      <span class="visually-hidden">Toggle navigation</span>
+      <span class="menu-toggle__icon" aria-hidden="true"></span>
+    </button>
+    <nav class="primary-navigation" id="primary-navigation" aria-label="Primary navigation">
+      <a href="projects.html">Projects</a>
+      <a href="index.html#studio">Studio</a>
+      <a href="index.html#contact">Contact</a>
+      <a href="news.html" aria-current="page">News</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="news-featured" aria-label="Top news">
+      <div class="news-featured__panel" aria-hidden="true">
+        <img src="images/DSRHighLine.jpg" alt="">
+      </div>
+      <div class="news-featured__center">
+        <img class="news-featured__image" src="images/DSRTheBroad.jpg" alt="">
+        <h1>Top News</h1>
+        <div class="news-featured__story" aria-live="polite">
+          <p class="news-featured__publication">Architectural Record <span>(10/04/2026)</span></p>
+          <p class="news-featured__headline">Elizabeth Diller Wins 2026 Architect of RECORD Award</p>
+        </div>
+      </div>
+      <div class="news-featured__panel" aria-hidden="true">
+        <img src="images/DSRLincolnCenterPublicSpaces.jpg" alt="">
+      </div>
+      <button class="news-featured__control news-featured__control--previous" type="button" aria-label="Previous top news story">
+        <span aria-hidden="true">&lsaquo;</span>
+      </button>
+      <button class="news-featured__control news-featured__control--next" type="button" aria-label="Next top news story">
+        <span aria-hidden="true">&rsaquo;</span>
+      </button>
+    </section>
+
+    <section class="news-page" aria-labelledby="news-title">
+      <h2 id="news-title">News</h2>
+      <form class="news-search" role="search">
+        <label class="visually-hidden" for="news-search-input">Search news</label>
+        <input id="news-search-input" type="search" placeholder="Search..." autocomplete="off">
+        <button type="submit" aria-label="Submit news search">
+          <svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="10.8" cy="10.8" r="6.8"></circle><path d="m16 16 5 5"></path></svg>
+        </button>
+      </form>
+
+      <div class="news-toolbar">
+        <div class="news-sort-group">
+          <label class="news-sort">
+            <span>Sort By</span>
+            <select id="news-sort">
+              <option value="relevance">Relevance</option>
+              <option value="date">Date</option>
+              <option value="title">Title</option>
+            </select>
+          </label>
+          <label class="news-order">
+            <span class="visually-hidden">Sort direction</span>
+            <select id="news-order">
+              <option value="ascending">Ascending</option>
+              <option value="descending">Descending</option>
+            </select>
+          </label>
+        </div>
+        <div class="news-view-toggle" role="group" aria-label="News view">
+          <button type="button" data-view="grid" class="is-active" aria-pressed="true">Grid</button>
+          <button type="button" data-view="list" aria-pressed="false">List</button>
+        </div>
+      </div>
+
+      <div class="news-grid" id="news-grid" aria-live="polite">
+        <article class="news-card" data-title="Elizabeth Diller Wins 2026 Architect of RECORD Award" data-date="2026-10-04" data-publication="Architectural Record" data-author="The Editors">
+          <div class="news-card__header">
+            <div class="news-card__image" aria-hidden="true"><img src="images/DSRTheBroad.jpg" alt=""></div>
+            <div class="news-card__metadata">
+              <p>Architectural Record</p>
+              <time datetime="2026-10-04">10/04/2026</time>
+            </div>
+          </div>
+          <p class="news-card__title">Elizabeth Diller Wins 2026 Architect of RECORD Award</p>
+          <p class="news-card__byline">-By The Editors</p>
+        </article>
+        <article class="news-card" data-title="A Warehouse is Converted into the New Home of Architecture at MIT" data-date="2026-09-30" data-publication="Architectural Record" data-author="Izzy Kornblatt">
+          <div class="news-card__header">
+            <div class="news-card__image" aria-hidden="true"><img src="images/DSRUpperMontparnasse.jpg" alt=""></div>
+            <div class="news-card__metadata">
+              <p>Architectural Record</p>
+              <time datetime="2026-09-30">09/30/2026</time>
+            </div>
+          </div>
+          <p class="news-card__title">A Warehouse is Converted into the New Home of Architecture at MIT</p>
+          <p class="news-card__byline">-By Izzy Kornblatt</p>
+        </article>
+        <article class="news-card" data-title="Architects Never Loved the Kennedy Center. But They Don’t Want to See It Gone." data-date="2026-09-29" data-publication="WSJ" data-author="Ben Kesslen">
+          <div class="news-card__header">
+            <div class="news-card__image" aria-hidden="true"><img src="images/DSRLincolnCenterforthePerformingArts.jpg" alt=""></div>
+            <div class="news-card__metadata">
+              <p>WSJ</p>
+              <time datetime="2026-09-29">09/29/2026</time>
+            </div>
+          </div>
+          <p class="news-card__title">Architects Never Loved the Kennedy Center. But They Don’t Want to See It Gone.</p>
+          <p class="news-card__byline">-By Ben Kesslen</p>
+        </article>
+        <article class="news-card" data-title="Diller Scofidio + Renfro selected to design new cafe and bio filtration system at NY Botanical Garden" data-date="2026-08-05" data-publication="The Architect’s Newspaper" data-author="Daniel Jonas Roche">
+          <div class="news-card__header">
+            <div class="news-card__image" aria-hidden="true"><img src="images/DSRMoMA.jpg" alt=""></div>
+            <div class="news-card__metadata">
+              <p>The Architect’s Newspaper</p>
+              <time datetime="2026-08-05">08/05/2026</time>
+            </div>
+          </div>
+          <p class="news-card__title">Diller Scofidio + Renfro selected to design new cafe and bio filtration system at NY Botanical Garden</p>
+          <p class="news-card__byline">-By Daniel Jonas Roche</p>
+        </article>
+      </div>
+      <p class="news-empty-state" hidden>No news stories match your search.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a class="site-footer__logo" href="index.html#home" aria-label="Diller Scofidio + Renfro home">
+      <img src="images/CustomDSRLogo.png" alt="">
+    </a>
+    <div class="site-footer__offices">
+      <address>
+        <span>Diller Scofidio + Renfro</span>
+        601 W. 26th Street, Suite 1815,<br>
+        New York, NY 10001
+      </address>
+      <address>
+        <span>United Kingdom:</span>
+        75 Cowcross St,<br>
+        London EC1M 6EL, UK
+      </address>
+    </div>
+    <nav class="site-footer__navigation" aria-label="Footer navigation">
+      <a href="projects.html">Projects</a>
+      <a href="index.html#studio">Studio</a>
+      <a href="index.html#contact">Contact</a>
+      <a href="news.html" aria-current="page">News</a>
+    </nav>
+  </footer>
+</body>
+</html>

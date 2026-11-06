@@ -20,18 +20,16 @@ const projects = [
   { title: "MoMA", image: "images/momacarousel2.jpg" },
   { title: "MoMA", image: "images/moma_carousel3.jpg" },
   { title: "MoMA", image: "images/moma_carousel4.jpg" },
-  { title: "The High Line" },
-  { title: "Lincoln Center" },
-  { title: "Institute of Contemporary Art" },
-  { title: "The Tide" },
-  { title: "MoMA Expansion" },
-  { title: "Blur Building" },
-  { title: "Hypar Pavilion" },
-  { title: "V&A Museum" },
-  { title: "The Shed" },
-  { title: "Public Space" },
-  { title: "Cultural Center" },
-  { title: "Urban Waterfront" }
+  { title: "The High Line", image: "images/DSRHighLine.jpg" },
+  { title: "Lincoln Center Public Spaces", image: "images/DSRLincolnCenterPublicSpaces.jpg" },
+  { title: "Therme Dubai", image: "images/DSRThermeDubai.jpg" },
+  { title: "The Tide", image: "images/DSRTheTide.jpg" },
+  { title: "Blur Building", image: "images/DSRBlurBuilding.jpg" },
+  { title: "Hypar Pavilion and Lincoln Ristorante", image: "images/DSRHyparPavilionandLincolnRistorante.jpg" },
+  { title: "The Broad", image: "images/DSRTheBroad.jpg" },
+  { title: "Zaryadye Park", image: "images/DSRZaryadyePark.jpg" },
+  { title: "Canal Cafe", image: "images/DSRCanalCafé.jpg" },
+  { title: "Park Union Bridge", image: "images/DSRParkUnionBridge.jpg" }
 ];
 let activeProject = 0;
 
