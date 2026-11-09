@@ -31,25 +31,29 @@
   <main class="projects-page">
     <nav class="project-category-bar" aria-label="Filter projects by category">
       <button class="project-filter-reset is-active" type="button" aria-pressed="true">All Projects</button>
-      <details class="category-filter" data-category="cultural">
-        <summary>Cultural</summary>
-        <div class="category-filter__options">
-          <button type="button" class="project-criterion" data-criterion="installation" aria-pressed="false">Installation</button>
-          <button type="button" class="project-criterion" data-criterion="display" aria-pressed="false">Display</button>
-          <button type="button" class="project-criterion" data-criterion="objects" aria-pressed="false">Objects</button>
-          <button type="button" class="project-criterion" data-criterion="performance" aria-pressed="false">Performance</button>
-          <button type="button" class="project-criterion" data-criterion="publications" aria-pressed="false">Publications</button>
-        </div>
-      </details>
       <details class="category-filter" data-category="public-space">
         <summary>Public Space</summary>
         <div class="category-filter__options">
+          <button type="button" class="project-criterion" data-criterion="realized" aria-pressed="false">Realized</button>
           <button type="button" class="project-criterion" data-criterion="urban" aria-pressed="false">Urban</button>
-          <button type="button" class="project-criterion" data-criterion="nature" aria-pressed="false">Nature</button>
-          <button type="button" class="project-criterion" data-criterion="building" aria-pressed="false">Building</button>
-          <button type="button" class="project-criterion" data-criterion="sustainability" aria-pressed="false">Sustainability</button>
-          <button type="button" class="project-criterion" data-criterion="landscape" aria-pressed="false">Landscape</button>
+          <button type="button" class="project-criterion" data-criterion="site-specific" aria-pressed="false">Site Specific</button>
           <button type="button" class="project-criterion" data-criterion="public" aria-pressed="false">Public</button>
+          <button type="button" class="project-criterion" data-criterion="sustainability" aria-pressed="false">Sustainability</button>
+          <button type="button" class="project-criterion" data-criterion="nature" aria-pressed="false">Nature</button>
+          <button type="button" class="project-criterion" data-criterion="social" aria-pressed="false">Social</button>
+          <button type="button" class="project-criterion" data-criterion="landscape" aria-pressed="false">Landscape</button>
+          <button type="button" class="project-criterion" data-criterion="culture" aria-pressed="false">Culture</button>
+          <button type="button" class="project-criterion" data-criterion="waterfront" aria-pressed="false">Waterfront</button>
+          <button type="button" class="project-criterion" data-criterion="water" aria-pressed="false">Water</button>
+          <button type="button" class="project-criterion" data-criterion="civic" aria-pressed="false">Civic</button>
+          <button type="button" class="project-criterion" data-criterion="adaptive-reuse" aria-pressed="false">Adaptive Reuse</button>
+          <button type="button" class="project-criterion" data-criterion="pavilion" aria-pressed="false">Pavilion</button>
+          <button type="button" class="project-criterion" data-criterion="metal" aria-pressed="false">Metal</button>
+          <button type="button" class="project-criterion" data-criterion="interdisciplinary" aria-pressed="false">Interdisciplinary</button>
+          <button type="button" class="project-criterion" data-criterion="independent-projects" aria-pressed="false">Independent Projects</button>
+          <button type="button" class="project-criterion" data-criterion="hybrid" aria-pressed="false">Hybrid</button>
+          <button type="button" class="project-criterion" data-criterion="competition" aria-pressed="false">Competition</button>
+          <button type="button" class="project-criterion" data-criterion="climate" aria-pressed="false">Climate</button>
         </div>
       </details>
       <details class="category-filter" data-category="education">
@@ -72,10 +76,48 @@
       <details class="category-filter" data-category="commercial">
         <summary>Commercial</summary>
         <div class="category-filter__options">
+          <button type="button" class="project-criterion" data-criterion="urban" aria-pressed="false">Urban</button>
+          <button type="button" class="project-criterion" data-criterion="nature" aria-pressed="false">Nature</button>
           <button type="button" class="project-criterion" data-criterion="building" aria-pressed="false">Building</button>
-          <button type="button" class="project-criterion" data-criterion="display" aria-pressed="false">Display</button>
-          <button type="button" class="project-criterion" data-criterion="objects" aria-pressed="false">Objects</button>
-          <button type="button" class="project-criterion" data-criterion="commercial" aria-pressed="false">Commercial</button>
+          <button type="button" class="project-criterion" data-criterion="sustainability" aria-pressed="false">Sustainability</button>
+          <button type="button" class="project-criterion" data-criterion="realized" aria-pressed="false">Realized</button>
+          <button type="button" class="project-criterion" data-criterion="landscape" aria-pressed="false">Landscape</button>
+          <button type="button" class="project-criterion" data-criterion="housing" aria-pressed="false">Housing</button>
+          <button type="button" class="project-criterion" data-criterion="high-rise" aria-pressed="false">High Rise</button>
+          <button type="button" class="project-criterion" data-criterion="historic" aria-pressed="false">Historic</button>
+          <button type="button" class="project-criterion" data-criterion="glass" aria-pressed="false">Glass</button>
+          <button type="button" class="project-criterion" data-criterion="competition" aria-pressed="false">Competition</button>
+          <button type="button" class="project-criterion" data-criterion="adaptive-reuse" aria-pressed="false">Adaptive Reuse</button>
+        </div>
+      </details>
+      <details class="category-filter" data-category="installation" data-filter-scope="all">
+        <summary>INSTALLATION</summary>
+        <div class="category-filter__options">
+          <button type="button" class="project-criterion" data-criterion="installation" aria-pressed="false">Show projects</button>
+        </div>
+      </details>
+      <details class="category-filter" data-category="display" data-filter-scope="all">
+        <summary>DISPLAY</summary>
+        <div class="category-filter__options">
+          <button type="button" class="project-criterion" data-criterion="display" aria-pressed="false">Show projects</button>
+        </div>
+      </details>
+      <details class="category-filter" data-category="objects" data-filter-scope="all">
+        <summary>OBJECTS</summary>
+        <div class="category-filter__options">
+          <button type="button" class="project-criterion" data-criterion="objects" aria-pressed="false">Show projects</button>
+        </div>
+      </details>
+      <details class="category-filter" data-category="performance" data-filter-scope="all">
+        <summary>PERFORMANCE</summary>
+        <div class="category-filter__options">
+          <button type="button" class="project-criterion" data-criterion="performance" aria-pressed="false">Show projects</button>
+        </div>
+      </details>
+      <details class="category-filter" data-category="publications" data-filter-scope="all">
+        <summary>PUBLICATIONS</summary>
+        <div class="category-filter__options">
+          <button type="button" class="project-criterion" data-criterion="publications" aria-pressed="false">Show projects</button>
         </div>
       </details>
     </nav>

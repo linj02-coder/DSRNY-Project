@@ -31,25 +31,29 @@
   <main class="projects-page">
     <nav class="project-category-bar" aria-label="Filter projects by category">
       <button class="project-filter-reset is-active" type="button" aria-pressed="true">All Projects</button>
-      <details class="category-filter" data-category="cultural">
-        <summary>Cultural</summary>
-        <div class="category-filter__options">
-          <button type="button" class="project-criterion" data-criterion="installation" aria-pressed="false">Installation</button>
-          <button type="button" class="project-criterion" data-criterion="display" aria-pressed="false">Display</button>
-          <button type="button" class="project-criterion" data-criterion="objects" aria-pressed="false">Objects</button>
-          <button type="button" class="project-criterion" data-criterion="performance" aria-pressed="false">Performance</button>
-          <button type="button" class="project-criterion" data-criterion="publications" aria-pressed="false">Publications</button>
-        </div>
-      </details>
       <details class="category-filter" data-category="public-space">
         <summary>Public Space</summary>
         <div class="category-filter__options">
+          <button type="button" class="project-criterion" data-criterion="realized" aria-pressed="false">Realized</button>
           <button type="button" class="project-criterion" data-criterion="urban" aria-pressed="false">Urban</button>
-          <button type="button" class="project-criterion" data-criterion="nature" aria-pressed="false">Nature</button>
-          <button type="button" class="project-criterion" data-criterion="building" aria-pressed="false">Building</button>
-          <button type="button" class="project-criterion" data-criterion="sustainability" aria-pressed="false">Sustainability</button>
-          <button type="button" class="project-criterion" data-criterion="landscape" aria-pressed="false">Landscape</button>
+          <button type="button" class="project-criterion" data-criterion="site-specific" aria-pressed="false">Site Specific</button>
           <button type="button" class="project-criterion" data-criterion="public" aria-pressed="false">Public</button>
+          <button type="button" class="project-criterion" data-criterion="sustainability" aria-pressed="false">Sustainability</button>
+          <button type="button" class="project-criterion" data-criterion="nature" aria-pressed="false">Nature</button>
+          <button type="button" class="project-criterion" data-criterion="social" aria-pressed="false">Social</button>
+          <button type="button" class="project-criterion" data-criterion="landscape" aria-pressed="false">Landscape</button>
+          <button type="button" class="project-criterion" data-criterion="culture" aria-pressed="false">Culture</button>
+          <button type="button" class="project-criterion" data-criterion="waterfront" aria-pressed="false">Waterfront</button>
+          <button type="button" class="project-criterion" data-criterion="water" aria-pressed="false">Water</button>
+          <button type="button" class="project-criterion" data-criterion="civic" aria-pressed="false">Civic</button>
+          <button type="button" class="project-criterion" data-criterion="adaptive-reuse" aria-pressed="false">Adaptive Reuse</button>
+          <button type="button" class="project-criterion" data-criterion="pavilion" aria-pressed="false">Pavilion</button>
+          <button type="button" class="project-criterion" data-criterion="metal" aria-pressed="false">Metal</button>
+          <button type="button" class="project-criterion" data-criterion="interdisciplinary" aria-pressed="false">Interdisciplinary</button>
+          <button type="button" class="project-criterion" data-criterion="independent-projects" aria-pressed="false">Independent Projects</button>
+          <button type="button" class="project-criterion" data-criterion="hybrid" aria-pressed="false">Hybrid</button>
+          <button type="button" class="project-criterion" data-criterion="competition" aria-pressed="false">Competition</button>
+          <button type="button" class="project-criterion" data-criterion="climate" aria-pressed="false">Climate</button>
         </div>
       </details>
       <details class="category-filter" data-category="education">
@@ -72,10 +76,48 @@
       <details class="category-filter" data-category="commercial">
         <summary>Commercial</summary>
         <div class="category-filter__options">
+          <button type="button" class="project-criterion" data-criterion="urban" aria-pressed="false">Urban</button>
+          <button type="button" class="project-criterion" data-criterion="nature" aria-pressed="false">Nature</button>
           <button type="button" class="project-criterion" data-criterion="building" aria-pressed="false">Building</button>
-          <button type="button" class="project-criterion" data-criterion="display" aria-pressed="false">Display</button>
-          <button type="button" class="project-criterion" data-criterion="objects" aria-pressed="false">Objects</button>
-          <button type="button" class="project-criterion" data-criterion="commercial" aria-pressed="false">Commercial</button>
+          <button type="button" class="project-criterion" data-criterion="sustainability" aria-pressed="false">Sustainability</button>
+          <button type="button" class="project-criterion" data-criterion="realized" aria-pressed="false">Realized</button>
+          <button type="button" class="project-criterion" data-criterion="landscape" aria-pressed="false">Landscape</button>
+          <button type="button" class="project-criterion" data-criterion="housing" aria-pressed="false">Housing</button>
+          <button type="button" class="project-criterion" data-criterion="high-rise" aria-pressed="false">High Rise</button>
+          <button type="button" class="project-criterion" data-criterion="historic" aria-pressed="false">Historic</button>
+          <button type="button" class="project-criterion" data-criterion="glass" aria-pressed="false">Glass</button>
+          <button type="button" class="project-criterion" data-criterion="competition" aria-pressed="false">Competition</button>
+          <button type="button" class="project-criterion" data-criterion="adaptive-reuse" aria-pressed="false">Adaptive Reuse</button>
+        </div>
+      </details>
+      <details class="category-filter" data-category="installation" data-filter-scope="all">
+        <summary>Installation</summary>
+        <div class="category-filter__options">
+          <button type="button" class="project-criterion" data-criterion="installation" aria-pressed="false">Show projects</button>
+        </div>
+      </details>
+      <details class="category-filter" data-category="display" data-filter-scope="all">
+        <summary>Display</summary>
+        <div class="category-filter__options">
+          <button type="button" class="project-criterion" data-criterion="display" aria-pressed="false">Show projects</button>
+        </div>
+      </details>
+      <details class="category-filter" data-category="objects" data-filter-scope="all">
+        <summary>Objects</summary>
+        <div class="category-filter__options">
+          <button type="button" class="project-criterion" data-criterion="objects" aria-pressed="false">Show projects</button>
+        </div>
+      </details>
+      <details class="category-filter" data-category="performance" data-filter-scope="all">
+        <summary>Performance</summary>
+        <div class="category-filter__options">
+          <button type="button" class="project-criterion" data-criterion="performance" aria-pressed="false">Show projects</button>
+        </div>
+      </details>
+      <details class="category-filter" data-category="publications" data-filter-scope="all">
+        <summary>Publications</summary>
+        <div class="category-filter__options">
+          <button type="button" class="project-criterion" data-criterion="publications" aria-pressed="false">Show projects</button>
         </div>
       </details>
     </nav>
@@ -114,40 +156,88 @@
       </div>
 
       <div class="project-grid" id="project-grid" aria-live="polite">
-        <article class="project-card" data-name="Upper Montparnasse" data-year="2027" data-categories="cultural residential" data-criteria="building urban housing high-rise competition">
+        <article class="project-card" data-name="Upper Montparnasse" data-year="2027" data-categories="commercial cultural residential" data-criteria="building urban housing high-rise competition">
           <a href="#upper-montparnasse">
             <img src="images/DSRUpperMontparnasse.jpg" alt="Upper Montparnasse" loading="lazy">
             <h2>Upper Montparnasse, 2027</h2>
           </a>
         </article>
-        <article class="project-card" data-name="Therme Dubai" data-year="2025" data-categories="public-space cultural" data-criteria="nature building sustainability public">
+        <article class="project-card" data-name="Upper Montparnasse" data-year="2027" data-categories="commercial cultural residential" data-criteria="building urban housing high-rise competition">
+          <a href="#upper-montparnasse">
+            <img src="images/DSRTheBrasserie.jpg" alt="The Brasserie, alternate view" loading="lazy">
+            <h2>The Brasserie, 2000</h2>
+          </a>
+        </article>
+        <article class="project-card" data-name="Therme Dubai" data-year="2025" data-categories="commercial cultural" data-criteria="nature building sustainability public">
           <a href="#therme-dubai">
             <img src="images/DSRThermeDubai.jpg" alt="Therme Dubai" loading="lazy">
             <h2>Therme Dubai, 2025</h2>
           </a>
         </article>
-        <article class="project-card" data-name="Parco Romana" data-year="2025" data-categories="public-space residential" data-criteria="urban nature landscape housing">
+        <article class="project-card" data-name="Parco Romana" data-year="2025" data-categories="commercial public-space residential" data-criteria="urban nature landscape housing">
           <a href="#parco-romana">
             <img src="images/DSRParcoRomana.jpg" alt="Parco Romana" loading="lazy">
             <h2>Parco Romana, 2025</h2>
           </a>
         </article>
-        <article class="project-card" data-name="Pirelli 39" data-year="2021" data-categories="residential cultural" data-criteria="building high-rise housing commercial">
+        <article class="project-card" data-name="Canal Cafe" data-year="2025" data-categories="public-space commercial" data-criteria="public urban commercial">
+          <a href="#canal-cafe">
+            <img src="images/DSRCanalCafé.jpg" alt="Canal Café" loading="lazy">
+            <h2>Canal Café, 2025</h2>
+          </a>
+        </article>
+        <article class="project-card" data-name="Pirelli 39" data-year="2021" data-categories="commercial residential" data-criteria="building high-rise housing commercial">
           <a href="#pirelli-39">
             <img src="images/DSRPirelli39.jpg" alt="Pirelli 39" loading="lazy">
             <h2>Pirelli 39, 2021</h2>
           </a>
         </article>
-        <article class="project-card" data-name="London Wall West" data-year="2020" data-categories="cultural public-space" data-criteria="building urban commercial">
+        <article class="project-card" data-name="Park Union Bridge" data-year="2021" data-categories="public-space commercial" data-criteria="urban public landscape building">
+          <a href="#park-union-bridge">
+            <img src="images/DSRParkUnionBridge.jpg" alt="Park Union Bridge" loading="lazy">
+            <h2>Park Union Bridge, 2021</h2>
+          </a>
+        </article>
+        <article class="project-card" data-name="London Wall West" data-year="2020" data-categories="commercial cultural" data-criteria="building urban commercial">
           <a href="#london-wall-west">
             <img src="images/DSRLondonWallWest.jpg" alt="London Wall West" loading="lazy">
             <h2>London Wall West, 2020</h2>
           </a>
         </article>
-        <article class="project-card" data-name="The Broad" data-year="2015" data-categories="cultural" data-criteria="building display objects">
+        <article class="project-card" data-name="Dissona Live-Work Complex" data-year="2020" data-categories="commercial residential" data-criteria="building housing commercial">
+          <a href="#dissona-live-work">
+            <img src="images/DSRDissonaLive-WorkComplex.jpg" alt="Dissona Live-Work Complex" loading="lazy">
+            <h2>Dissona Live-Work Complex, 2020</h2>
+          </a>
+        </article>
+        <article class="project-card" data-name="The High Line" data-year="2019" data-categories="public-space" data-criteria="urban landscape public">
+          <a href="#the-high-line">
+            <img src="images/DSRHighLine.jpg" alt="The High Line" loading="lazy">
+            <h2>High Line, 2019</h2>
+          </a>
+        </article>
+        <article class="project-card" data-name="MoMA" data-year="2019" data-categories="public-space cultural" data-criteria="building display objects">
+          <a href="#moma">
+            <img src="images/DSRMoMA.jpg" alt="MoMA" loading="lazy">
+            <h2>MoMA, 2019</h2>
+          </a>
+        </article>
+        <article class="project-card" data-name="The Broad" data-year="2015" data-categories="public-space cultural" data-criteria="building display objects">
           <a href="#the-broad">
             <img src="images/DSRTheBroad.jpg" alt="The Broad" loading="lazy">
             <h2>The Broad, 2015</h2>
+          </a>
+        </article>
+        <article class="project-card" data-name="Zaryadye Park" data-year="2017" data-categories="public-space" data-criteria="nature landscape public">
+          <a href="#zaryadye-park">
+            <img src="images/DSRZaryadyePark.jpg" alt="Zaryadye Park" loading="lazy">
+            <h2>Zaryadye Park, 2017</h2>
+          </a>
+        </article>
+        <article class="project-card" data-name="The Broad Plaza" data-year="2015" data-categories="public-space cultural" data-criteria="building display objects public">
+          <a href="#the-broad-plaza">
+            <img src="images/DSRTheBroadPlaza.jpg" alt="The Broad Plaza" loading="lazy">
+            <h2>The Broad Plaza, 2015</h2>
           </a>
         </article>
         <article class="project-card" data-name="The Tide" data-year="2019" data-categories="public-space" data-criteria="urban landscape public">
@@ -156,22 +246,52 @@
             <h2>The Tide, 2019</h2>
           </a>
         </article>
-        <article class="project-card" data-name="Institute of Contemporary Art" data-year="2006" data-categories="cultural education" data-criteria="building education display">
-          <a href="#institute-of-contemporary-art">
-            <img src="https://picsum.photos/seed/dsr-ica/800/560" alt="Placeholder image for the Institute of Contemporary Art" loading="lazy">
-            <h2>Institute of Contemporary Art, 2006</h2>
+        <article class="project-card" data-name="Google Pier 57" data-year="2023" data-categories="commercial public-space" data-criteria="urban public landscape commercial">
+          <a href="#google-pier-57">
+            <img src="images/DSRGooglePier57.jpg" alt="Google Pier 57" loading="lazy">
+            <h2>Google Pier 57, 2023</h2>
           </a>
         </article>
-        <article class="project-card" data-name="Blur Building" data-year="2002" data-categories="installation cultural" data-criteria="nature installation building">
+        <article class="project-card" data-name="Wishard Pavilion" data-year="2014" data-categories="public-space education" data-criteria="building education public">
+          <a href="#wishard-pavilion">
+            <img src="images/DSRWishardPavilion.jpg" alt="Wishard Pavilion" loading="lazy">
+            <h2>Wishard Pavilion, 2014</h2>
+          </a>
+        </article>
+        <article class="project-card" data-name="Lincoln Center for the Performing Arts" data-year="2012" data-categories="public-space cultural" data-criteria="public urban performance">
+          <a href="#lincoln-center-for-the-performing-arts">
+            <img src="images/DSRLincolnCenterforthePerformingArts.jpg" alt="Lincoln Center for the Performing Arts" loading="lazy">
+            <h2>Lincoln Center for the Performing Arts, 2012</h2>
+          </a>
+        </article>
+        <article class="project-card" data-name="65th Street Bridge" data-year="2012" data-categories="public-space" data-criteria="urban building public">
+          <a href="#65th-street-bridge">
+            <img src="images/DSR65thStreetBridge.jpg" alt="65th Street Bridge" loading="lazy">
+            <h2>65th Street Bridge, 2012</h2>
+          </a>
+        </article>
+        <article class="project-card" data-name="Hypar Pavilion and Lincoln Ristorante" data-year="2010" data-categories="commercial cultural" data-criteria="building public commercial performance">
+          <a href="#hypar-pavilion">
+            <img src="images/DSRHyparPavilionandLincolnRistorante.jpg" alt="Hypar Pavilion and Lincoln Ristorante" loading="lazy">
+            <h2>Hypar Pavilion and Lincoln Ristorante, 2010</h2>
+          </a>
+        </article>
+        <article class="project-card" data-name="Lincoln Center Public Spaces" data-year="2010" data-categories="public-space cultural" data-criteria="public urban performance">
+          <a href="#lincoln-center-public-spaces">
+            <img src="images/DSRLincolnCenterPublicSpaces.jpg" alt="Lincoln Center Public Spaces" loading="lazy">
+            <h2>Lincoln Center Public Spaces, 2010</h2>
+          </a>
+        </article>
+        <article class="project-card" data-name="Arbores Laetae (Joyful Trees)" data-year="2008" data-categories="public-space installation" data-criteria="nature landscape public installation">
+          <a href="#arbores-laetae">
+            <img src="images/DSRArboresLaetae(JoyfulTrees).jpg" alt="Arbores Laetae (Joyful Trees)" loading="lazy">
+            <h2>Arbores Laetae (Joyful Trees), 2008</h2>
+          </a>
+        </article>
+        <article class="project-card" data-name="Blur Building" data-year="2002" data-categories="public-space installation cultural" data-criteria="nature installation building">
           <a href="#blur-building">
             <img src="images/DSRBlurBuilding.jpg" alt="Blur Building" loading="lazy">
             <h2>Blur Building, 2002</h2>
-          </a>
-        </article>
-        <article class="project-card" data-name="Lincoln Center" data-year="2012" data-categories="public-space cultural" data-criteria="public urban performance">
-          <a href="#lincoln-center">
-            <img src="images/DSRLincolnCenterforthePerformingArts.jpg" alt="Lincoln Center for the Performing Arts" loading="lazy">
-            <h2>Lincoln Center, 2012</h2>
           </a>
         </article>
       </div>

@@ -12,18 +12,66 @@ const viewButtons = [...document.querySelectorAll(".project-view-toggle button")
 let activeCriterion = "";
 let activeCategory = "";
 
+const projectSubcategories = {
+  commercial: {
+    urban: ["Upper Montparnasse", "Parco Romana", "London Wall West", "Google Pier 57"],
+    nature: ["Therme Dubai", "Parco Romana", "Google Pier 57"],
+    building: ["Pirelli 39", "Dissona Live-Work Complex", "Hypar Pavilion and Lincoln Ristorante"],
+    sustainability: ["Therme Dubai", "Hypar Pavilion and Lincoln Ristorante"],
+    realized: ["Parco Romana", "Google Pier 57"],
+    landscape: ["Parco Romana", "Google Pier 57"],
+    housing: ["Pirelli 39", "Dissona Live-Work Complex"],
+    "high-rise": ["Upper Montparnasse", "Pirelli 39"],
+    historic: ["London Wall West", "Hypar Pavilion and Lincoln Ristorante"],
+    glass: ["Upper Montparnasse", "Pirelli 39"],
+    competition: ["Upper Montparnasse", "Parco Romana"],
+    "adaptive-reuse": ["Therme Dubai", "London Wall West"]
+  },
+  "public-space": {
+    realized: ["Canal Cafe", "Park Union Bridge", "The High Line", "MoMA", "The Tide", "Zaryadye Park", "The Broad", "The Broad Plaza", "Wishard Pavilion", "Lincoln Center for the Performing Arts", "65th Street Bridge", "Lincoln Center Public Spaces", "Arbores Laetae (Joyful Trees)", "Blur Building"],
+    urban: ["Canal Cafe", "Park Union Bridge", "The High Line", "The Tide", "Zaryadye Park", "The Broad Plaza", "Lincoln Center for the Performing Arts", "65th Street Bridge", "Lincoln Center Public Spaces"],
+    "site-specific": ["Canal Cafe", "Park Union Bridge", "Zaryadye Park", "The Broad Plaza", "Wishard Pavilion", "65th Street Bridge", "Arbores Laetae (Joyful Trees)", "Blur Building"],
+    public: ["Canal Cafe", "Park Union Bridge", "The High Line", "The Tide", "The Broad Plaza", "Wishard Pavilion", "Lincoln Center for the Performing Arts", "Lincoln Center Public Spaces"],
+    sustainability: ["Canal Cafe", "Park Union Bridge", "The High Line", "The Tide", "Zaryadye Park", "Arbores Laetae (Joyful Trees)", "Blur Building"],
+    nature: ["Canal Cafe", "Park Union Bridge", "The High Line", "The Tide", "Zaryadye Park", "Arbores Laetae (Joyful Trees)", "Blur Building"],
+    social: ["Canal Cafe", "The High Line", "MoMA", "The Broad", "The Broad Plaza", "Wishard Pavilion"],
+    landscape: ["Park Union Bridge", "The High Line", "The Tide", "Zaryadye Park", "65th Street Bridge", "Arbores Laetae (Joyful Trees)"],
+    culture: ["MoMA", "The Broad", "The Broad Plaza", "Wishard Pavilion", "Lincoln Center for the Performing Arts", "Lincoln Center Public Spaces"],
+    waterfront: ["Canal Cafe", "Park Union Bridge", "The High Line", "The Tide", "65th Street Bridge"],
+    water: ["Canal Cafe", "Park Union Bridge", "The Tide", "Zaryadye Park", "Blur Building"],
+    civic: ["Park Union Bridge", "Wishard Pavilion", "Lincoln Center for the Performing Arts", "65th Street Bridge", "Lincoln Center Public Spaces"],
+    "adaptive-reuse": ["Canal Cafe", "The High Line", "The Tide", "The Broad Plaza", "Arbores Laetae (Joyful Trees)"],
+    pavilion: ["Canal Cafe", "Zaryadye Park", "Wishard Pavilion", "Arbores Laetae (Joyful Trees)"],
+    metal: ["Park Union Bridge", "65th Street Bridge", "Lincoln Center Public Spaces", "Blur Building"],
+    interdisciplinary: ["Canal Cafe", "Lincoln Center for the Performing Arts", "65th Street Bridge", "Lincoln Center Public Spaces"],
+    "independent-projects": ["MoMA", "The Broad", "The Broad Plaza", "Arbores Laetae (Joyful Trees)"],
+    hybrid: ["Canal Cafe", "Park Union Bridge", "MoMA", "Lincoln Center for the Performing Arts"],
+    competition: ["Park Union Bridge", "Zaryadye Park", "The Broad Plaza", "Wishard Pavilion"],
+    climate: ["Canal Cafe", "The Tide", "Zaryadye Park", "Blur Building"]
+  }
+};
+
+function matchesProjectCriterion(card, categoryName, criterion) {
+  const subcategoryProjects = projectSubcategories[categoryName]?.[criterion];
+  if (subcategoryProjects) return subcategoryProjects.includes(card.dataset.name);
+
+  return (card.dataset.criteria || "").split(" ").includes(criterion);
+}
+
 function updateCriterionCounts() {
   categoryDetails.forEach((category) => {
     const categoryName = category.dataset.category;
-    const categoryProjects = projectCards.filter((card) =>
-      (card.dataset.categories || "").split(" ").includes(categoryName)
-    );
+    const categoryProjects = category.dataset.filterScope === "all"
+      ? projectCards
+      : projectCards.filter((card) =>
+        (card.dataset.categories || "").split(" ").includes(categoryName)
+      );
 
     category.querySelectorAll(".project-criterion").forEach((button) => {
       const criterion = button.dataset.criterion;
       const matchingProjects = new Set(
         categoryProjects
-          .filter((card) => (card.dataset.criteria || "").split(" ").includes(criterion))
+          .filter((card) => matchesProjectCriterion(card, categoryName, criterion))
           .map((card) => card.dataset.name)
       );
       let count = button.querySelector(".project-criterion__count");
@@ -45,10 +93,11 @@ function updateProjects() {
 
   projectCards.forEach((card) => {
     const matchesSearch = card.dataset.name.toLowerCase().includes(query);
-    const criteria = (card.dataset.criteria || "").split(" ");
     const categories = (card.dataset.categories || "").split(" ");
-    const matchesCategory = !activeCriterion || !activeCategory || categories.includes(activeCategory);
-    const matchesCriterion = !activeCriterion || criteria.includes(activeCriterion);
+    const activeCategoryFilter = categoryDetails.find((category) => category.dataset.category === activeCategory);
+    const matchesCategory = !activeCriterion || !activeCategory ||
+      activeCategoryFilter?.dataset.filterScope === "all" || categories.includes(activeCategory);
+    const matchesCriterion = !activeCriterion || !activeCategory || matchesProjectCriterion(card, activeCategory, activeCriterion);
     const isVisible = matchesSearch && matchesCategory && matchesCriterion;
 
     card.hidden = !isVisible;

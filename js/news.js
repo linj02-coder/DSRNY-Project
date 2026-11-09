@@ -8,19 +8,28 @@ const newsEmptyState = document.querySelector(".news-empty-state");
 const newsViewButtons = [...document.querySelectorAll(".news-view-toggle button")];
 const featuredStory = document.querySelector(".news-featured__story");
 const featuredStories = newsCards.map((card) => ({
+  image: card.querySelector(".news-card__image img").getAttribute("src"),
   publication: card.dataset.publication,
   date: card.querySelector("time").textContent,
   title: card.dataset.title
 }));
 let activeFeaturedStory = 0;
+const featuredImage = document.querySelector(".news-featured__image");
+const previousFeaturedPreview = document.querySelector(".news-featured__preview--previous");
+const nextFeaturedPreview = document.querySelector(".news-featured__preview--next");
 
 function showFeaturedStory(index) {
   activeFeaturedStory = (index + featuredStories.length) % featuredStories.length;
   const story = featuredStories[activeFeaturedStory];
+  const previousStory = featuredStories[(activeFeaturedStory - 1 + featuredStories.length) % featuredStories.length];
+  const nextStory = featuredStories[(activeFeaturedStory + 1) % featuredStories.length];
   const publication = featuredStory.querySelector(".news-featured__publication");
   publication.firstChild.textContent = `${story.publication} `;
   publication.querySelector("span").textContent = `(${story.date})`;
   featuredStory.querySelector(".news-featured__headline").textContent = story.title;
+  featuredImage.src = story.image;
+  previousFeaturedPreview.src = previousStory.image;
+  nextFeaturedPreview.src = nextStory.image;
 }
 
 function updateNews() {
@@ -81,4 +90,6 @@ newsViewButtons.forEach((button) => {
       viewButton.setAttribute("aria-pressed", String(selected));
     });
   });
+
+  showFeaturedStory(activeFeaturedStory);
 });
