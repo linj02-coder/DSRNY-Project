@@ -13,7 +13,7 @@ const carouselTitle = carousel?.querySelector(".project-carousel__title");
 const carouselCount = carousel?.querySelector(".project-carousel__count");
 const previousProjectPreview = carousel?.querySelector(".project-carousel__preview--previous");
 const nextProjectPreview = carousel?.querySelector(".project-carousel__preview--next");
-const projects = [
+const featuredProjects = [
   { title: "The Shed", image: "images/theShedcarousel1.jpg" },
   { title: "The Shed", image: "images/theShedcarousel2.jpg" },
   { title: "The Shed", image: "images/theShedcarousel3.jpg" },
@@ -31,12 +31,22 @@ const projects = [
   { title: "The Broad", image: "images/DSRTheBroad.jpg" },
   { title: "Zaryadye Park", image: "images/ZaryadyeParkCarousel.jpg" },
   { title: "Canal Cafe", image: "images/DSRCanalCafé.jpg" },
-  { title: "Park Union Bridge", image: "images/DSRParkUnionBridge.jpg" }
+  { title: "Park Union Bridge", image: "images/DSRParkUnionBridge.jpg" },
+  { title: "Upper Montparnasse", image: "images/DSRUpperMontparnaseeCarousel1.jpeg" },
+  { title: "Upper Montparnasse", image: "images/DSRUpperMontparnaseeCarousel2.jpg" },
+  { title: "Upper Montparnasse", image: "images/DSRUpperMontparnaseeCarousel3.jpeg" },
+  { title: "The Brasserie", image: "images/DSRBrasserieCarousel1.jpg" },
+  { title: "The Brasserie", image: "images/DSRBrasserieCarousel2.jpg" },
+  { title: "The Brasserie", image: "images/DSRBrasserieCarousel3.jpg" },
+  { title: "The Brasserie", image: "images/DSRBrasserieCarousel4.jpg" }
 ];
+const projects = carousel?.dataset.images
+  ? carousel.dataset.images.split("|").map((image) => ({ title: carousel.getAttribute("aria-label").replace(/ images$/, ""), image }))
+  : featuredProjects;
 let activeProject = 0;
 
 function showProject(index) {
-  if (!carouselImage || !carouselTitle || !carouselCount) return;
+  if (!carouselImage || !carouselCount) return;
 
   activeProject = (index + projects.length) % projects.length;
   const projectNumber = String(activeProject + 1).padStart(2, "0");
@@ -46,7 +56,7 @@ function showProject(index) {
 
   carouselImage.src = project.image || `https://picsum.photos/seed/dsr-project-${projectNumber}/1800/650`;
   carouselImage.alt = project.title;
-  carouselTitle.textContent = project.title.toUpperCase();
+  if (carouselTitle) carouselTitle.textContent = project.title.toUpperCase();
   carouselCount.textContent = `${projectNumber} / ${String(projects.length).padStart(2, "0")}`;
   if (previousProjectPreview) previousProjectPreview.src = previousProject.image;
   if (nextProjectPreview) nextProjectPreview.src = nextProject.image;

@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The Brasserie | Diller Scofidio + Renfro</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Josefin+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="site-logo" href="index.html#home" aria-label="Diller Scofidio + Renfro home">
+      <img src="images/CustomDSRLogo.png" alt="Diller Scofidio + Renfro">
+    </a>
+    <button class="menu-toggle" type="button" aria-controls="primary-navigation" aria-expanded="false">
+      <span class="visually-hidden">Toggle navigation</span>
+      <span class="menu-toggle__icon" aria-hidden="true"></span>
+    </button>
+    <nav class="primary-navigation" id="primary-navigation" aria-label="Primary navigation">
+      <a href="projects.html" aria-current="page">Projects</a>
+      <a href="index.html#studio">Studio</a>
+      <a href="index.html#contact">Contact</a>
+      <a href="news.html">News</a>
+    </nav>
+  </header>
+  <main class="project-detail">
+    <div class="project-detail__body">
+      <h1 class="project-detail__title">The Brasserie</h1>
+      <p class="project-detail__location">(New York, New York)</p>
+      <img class="project-detail__hero" src="images/DSRTheBrasserie.jpg" alt="The Brasserie">
+      <p>The original Brasserie was designed by Philip Johnson and opened two years after the completion of the Seagram Building, in 1958. A legendary late-night spot for the Studio 54 crowd, the restaurant remained a popular round-the-clock eatery until it was destroyed by a kitchen fire in 1995. After it sat vacant for four years, the restaurant operator hired an architect to redesign the restaurant in a kitschy historical style. The construction plans had to be approved by Phyllis Lambert, who had originally selected Mies van der Rohe to design the building and continued to serve as its guardian and aesthetic conscience, protecting it from the vagaries of time and bad commercial impulses. Lambert immediately rejected the restaurant plans, tossing years of work into the waste bin. Intervening in the building’s history once again, she selected her preferred architect.</p>
+      <p>The design of the new Brasserie was prompted by the irony of its location. Lodged in the stone base of New York’s quintessential Modernist glass tower, the restaurant was entirely opaque, without a single pane of glass. The new design, by contrast, is a study of glass, transparency, and vision itself. A live video camera outside the entry feeds a plasma monitor inside and creates a virtual transparency between the street and foyer. This surrogate electronic window straddles the stone wall of the building’s base. The ritual of making an entrance begins at the revolving front door. A sensor above it automatically triggers the capture of a video portrait of each arriving patron; their surveillance-like image is added to a continuously changing video display over the bar. Entry into the main dining room, one-half level below the street, is effectively a runway walk: after patrons are announced on-screen, they appear in the flesh, descending down a long glass stairway and landing in the center of the dining room, where they are escorted to a table. The restaurant also offers other opportunities to consider the many attributes of glass, including its fragility, its optical properties, and its invitation to voyeurism.</p>
+    </div>
+    <section class="project-carousel" aria-label="The Brasserie images" data-images="images/DSRBrasserieCarousel1.jpg|images/DSRBrasserieCarousel2.jpg|images/DSRBrasserieCarousel3.jpg|images/DSRBrasserieCarousel4.jpg">
+      <img class="project-carousel__image" src="images/DSRBrasserieCarousel1.jpg" alt="The Brasserie" fetchpriority="high">
+      <span class="project-carousel__side-panel project-carousel__side-panel--left" aria-hidden="true">
+        <img class="project-carousel__preview project-carousel__preview--previous" src="images/DSRBrasserieCarousel4.jpg" alt="">
+      </span>
+      <span class="project-carousel__side-panel project-carousel__side-panel--right" aria-hidden="true">
+        <img class="project-carousel__preview project-carousel__preview--next" src="images/DSRBrasserieCarousel2.jpg" alt="">
+      </span>
+      <button class="project-carousel__control project-carousel__control--previous" type="button" aria-label="Previous image">
+        <span aria-hidden="true">&lsaquo;</span>
+      </button>
+      <button class="project-carousel__control project-carousel__control--next" type="button" aria-label="Next image">
+        <span aria-hidden="true">&rsaquo;</span>
+      </button>
+      <span class="project-carousel__count" aria-live="polite">01 / 04</span>
+    </section>
+    <div class="project-detail__body project-detail__facts">
+      <section class="project-facts">
+        <h2>Project Information</h2>
+        <div class="project-facts__grid project-facts__grid--info" style="--info-column: 640">
+          <p><strong>Location</strong> - New York, United States</p>
+          <p><strong>Size (GSF)</strong> - 7000</p>
+        </div>
+      </section>
+      <section class="project-facts project-facts--list">
+        <h2>Credits</h2>
+        <div class="project-facts__grid">
+          <p><strong>Partners</strong> - Elizabeth Diller and Ricardo Scofidio</p>
+          <p><strong>Project Leaders</strong> - Charles Renfro</p>
+          <p><strong>Sustainability &amp; Ecology Director</strong> - Sean Gallagher</p>
+          <p><strong>Designers</strong> - Deane Simpson, Lyn Rice, Matthew Johnson, and Nicholas de Monechaux</p>
+        </div>
+      </section>
+      <section class="project-facts project-facts--list project-facts--external">
+        <h2>External Credits</h2>
+        <div class="project-facts__grid">
+          <p>EAR STUDIO</p>
+          <p>STRUCTURED ENVIRONMENT</p>
+          <p><strong>Lighting Design</strong> - RICHARD SHAVER</p>
+          <p><strong>Curtain Design</strong> - MARY BRIGHT</p>
+          <p>2X4</p>
+          <p>Z CORPORATION</p>
+          <p>CONSTRUCTION BY DESIGN</p>
+        </div>
+      </section>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <a class="site-footer__logo" href="index.html#home" aria-label="Diller Scofidio + Renfro home">
+      <img src="images/CustomDSRLogo.png" alt="">
+    </a>
+    <div class="site-footer__offices">
+      <address><span>Diller Scofidio + Renfro:</span>601 W. 26th Street, Suite 1815,<br>New York, NY 10001</address>
+      <address><span>United Kingdom:</span>75 Cowcross St,<br>London EC1M 6EL, UK</address>
+    </div>
+    <nav class="site-footer__navigation" aria-label="Footer navigation">
+      <a href="projects.html" aria-current="page">Projects</a>
+      <a href="index.html#studio">Studio</a>
+      <a href="index.html#contact">Contact</a>
+      <a href="news.html">News</a>
+    </nav>
+  </footer>
+</body>
+</html>
