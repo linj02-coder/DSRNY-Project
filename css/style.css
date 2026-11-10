@@ -148,14 +148,14 @@ body {
 }
 
 .home-content {
-  width: min(100% - 48px, 920px);
+  width: calc(70% - 1.4px);
   margin: 0 auto;
   padding: 48px 0 64px;
 }
 
 .studio-section,
 .team-section {
-  max-width: 720px;
+  width: 100%;
   margin-right: auto;
   margin-left: auto;
 }
@@ -193,7 +193,7 @@ body {
 }
 
 .contact-section {
-  max-width: 720px;
+  width: 100%;
   margin: 56px auto 0;
   padding-top: 28px;
 }
@@ -1011,7 +1011,6 @@ body {
   .project-carousel__count { right: 12px; }
 
   .home-content {
-    width: calc(100% - 40px);
     padding: 36px 0 48px;
   }
 
